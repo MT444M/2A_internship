@@ -1,0 +1,432 @@
+<?xml version='1.0' encoding='utf-8'?>
+<interface version="1.3">
+  <object class="tk.Toplevel" id="toplevel1">
+    <property name="cursor">boat</property>
+    <property name="height">200</property>
+    <property name="title" translatable="yes">Detection_Extraction App</property>
+    <property name="width">200</property>
+    <containerlayout manager="grid">
+      <property type="col" id="0" name="weight">1</property>
+      <property type="row" id="0" name="weight">1</property>
+    </containerlayout>
+    <child>
+      <object class="ttk.Frame" id="frame1">
+        <property name="cursor">arrow</property>
+        <property name="height">400</property>
+        <property name="relief">ridge</property>
+        <property name="width">400</property>
+        <layout manager="grid">
+          <property name="column">0</property>
+          <property name="ipady">0</property>
+          <property name="padx">10</property>
+          <property name="pady">10</property>
+          <property name="row">0</property>
+          <property name="sticky">nsw</property>
+        </layout>
+        <containerlayout manager="grid">
+          <property name="anchor">center</property>
+        </containerlayout>
+        <child>
+          <object class="tk.Canvas" id="canvas" named="True">
+            <property name="borderwidth">5</property>
+            <property name="closeenough">2</property>
+            <property name="confine">true</property>
+            <property name="cursor">arrow</property>
+            <property name="insertborderwidth">5</property>
+            <property name="insertofftime">1</property>
+            <property name="insertwidth">1</property>
+            <property name="relief">ridge</property>
+            <property name="state">normal</property>
+            <property name="takefocus">true</property>
+            <property name="width">400</property>
+            <layout manager="grid">
+              <property name="column">1</property>
+              <property name="ipadx">150</property>
+              <property name="ipady">100</property>
+              <property name="row">2</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Frame" id="frame17">
+            <property name="height">200</property>
+            <property name="relief">ridge</property>
+            <property name="width">200</property>
+            <layout manager="grid">
+              <property name="column">1</property>
+              <property name="row">0</property>
+            </layout>
+            <child>
+              <object class="ttk.Label" id="label10">
+                <property name="anchor">center</property>
+                <property name="text" translatable="yes">DISPLAY WINDOW</property>
+                <layout manager="pack">
+                  <property name="ipadx">10</property>
+                  <property name="ipady">5</property>
+                  <property name="padx">10</property>
+                  <property name="pady">10</property>
+                  <property name="side">top</property>
+                </layout>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.LabeledScale" id="crop_top" named="True">
+            <property name="from_">0</property>
+            <property name="to">100</property>
+            <property name="variable">int:Crop_top</property>
+            <layout manager="grid">
+              <property name="column">1</property>
+              <property name="ipadx">10</property>
+              <property name="padx">10</property>
+              <property name="pady">10</property>
+              <property name="row">1</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.LabeledScale" id="crop_left" named="True">
+            <property name="from_">0</property>
+            <property name="to">200</property>
+            <property name="variable">int:Crop_left</property>
+            <layout manager="grid">
+              <property name="column">0</property>
+              <property name="ipadx">10</property>
+              <property name="padx">10</property>
+              <property name="pady">10</property>
+              <property name="row">2</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.LabeledScale" id="crop_right" named="True">
+            <property name="from_">1</property>
+            <property name="to">200</property>
+            <property name="variable">int:Crop_right</property>
+            <layout manager="grid">
+              <property name="column">3</property>
+              <property name="ipadx">10</property>
+              <property name="padx">10</property>
+              <property name="pady">10</property>
+              <property name="row">2</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.LabeledScale" id="crop_bottom" named="True">
+            <property name="from_">1</property>
+            <property name="to">200</property>
+            <property name="variable">int:Crop_bottom</property>
+            <layout manager="grid">
+              <property name="column">01</property>
+              <property name="ipadx">10</property>
+              <property name="padx">10</property>
+              <property name="pady">10</property>
+              <property name="row">3</property>
+            </layout>
+          </object>
+        </child>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Frame" id="Frame_commande" named="True">
+        <property name="cursor">arrow</property>
+        <property name="height">500</property>
+        <property name="relief">ridge</property>
+        <property name="width">50</property>
+        <layout manager="grid">
+          <property name="column">1</property>
+          <property name="columnspan">10</property>
+          <property name="ipadx">100</property>
+          <property name="ipady">120</property>
+          <property name="padx">10</property>
+          <property name="pady">10</property>
+          <property name="row">0</property>
+          <property name="sticky">nse</property>
+        </layout>
+        <containerlayout manager="grid">
+          <property name="anchor">n</property>
+          <property name="propagate">false</property>
+          <property type="col" id="0" name="pad">1</property>
+          <property type="col" id="0" name="uniform">1</property>
+          <property type="col" id="0" name="weight">1</property>
+          <property type="row" id="0" name="uniform">1</property>
+        </containerlayout>
+        <child>
+          <object class="ttk.Frame" id="frame10">
+            <property name="height">200</property>
+            <property name="relief">sunken</property>
+            <property name="width">200</property>
+            <layout manager="grid">
+              <property name="column">0</property>
+              <property name="ipadx">10</property>
+              <property name="padx">10</property>
+              <property name="pady">20</property>
+              <property name="row">1</property>
+            </layout>
+            <child>
+              <object class="ttk.Label" id="input" named="True">
+                <property name="anchor">center</property>
+                <property name="justify">center</property>
+                <property name="relief">raised</property>
+                <property name="text" translatable="yes">INPUT</property>
+                <layout manager="grid">
+                  <property name="column">0</property>
+                  <property name="ipadx">10</property>
+                  <property name="padx">10</property>
+                  <property name="pady">10</property>
+                  <property name="row">0</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="ttk.Radiobutton" id="video" named="True">
+                <property name="command" type="command" cbtype="with_wid">input_select</property>
+                <property name="takefocus">false</property>
+                <property name="text" translatable="yes">Video</property>
+                <property name="value">video</property>
+                <property name="variable">string:Input</property>
+                <bind sequence="&lt;1&gt;" handler="callback" add="" />
+                <layout manager="grid">
+                  <property name="column">0</property>
+                  <property name="ipadx">30</property>
+                  <property name="padx">50</property>
+                  <property name="pady">10</property>
+                  <property name="row">1</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="ttk.Radiobutton" id="camera" named="True">
+                <property name="command" type="command" cbtype="with_wid">input_select</property>
+                <property name="compound">center</property>
+                <property name="text" translatable="yes">Camera</property>
+                <property name="value">camera</property>
+                <property name="variable">string:Input</property>
+                <layout manager="grid">
+                  <property name="column">0</property>
+                  <property name="ipadx">25</property>
+                  <property name="padx">30</property>
+                  <property name="pady">10</property>
+                  <property name="row">2</property>
+                </layout>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Frame" id="frame11">
+            <property name="height">200</property>
+            <property name="relief">groove</property>
+            <property name="width">200</property>
+            <layout manager="grid">
+              <property name="column">0</property>
+              <property name="ipadx">10</property>
+              <property name="padx">10</property>
+              <property name="pady">20</property>
+              <property name="row">2</property>
+            </layout>
+            <child>
+              <object class="ttk.Label" id="detection" named="True">
+                <property name="anchor">center</property>
+                <property name="compound">center</property>
+                <property name="relief">raised</property>
+                <property name="text" translatable="yes">DETECTION</property>
+                <layout manager="grid">
+                  <property name="column">0</property>
+                  <property name="ipadx">10</property>
+                  <property name="padx">10</property>
+                  <property name="pady">10</property>
+                  <property name="row">0</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="ttk.Radiobutton" id="automatic" named="True">
+                <property name="command" type="command" cbtype="with_wid">detect_method_select</property>
+                <property name="text" translatable="yes">Automatically</property>
+                <property name="value">auto</property>
+                <property name="variable">string:Detect_method</property>
+                <layout manager="grid">
+                  <property name="column">0</property>
+                  <property name="ipadx">30</property>
+                  <property name="padx">10</property>
+                  <property name="pady">10</property>
+                  <property name="row">1</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="ttk.Radiobutton" id="manual" named="True">
+                <property name="command" type="command" cbtype="with_wid">detect_method_select</property>
+                <property name="text" translatable="yes">Manually</property>
+                <property name="value">manual</property>
+                <property name="variable">string:Detect_method</property>
+                <layout manager="grid">
+                  <property name="column">0</property>
+                  <property name="ipadx">45</property>
+                  <property name="padx">10</property>
+                  <property name="pady">10</property>
+                  <property name="row">2</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="ttk.Label" id="label5">
+                <property name="anchor">center</property>
+                <property name="relief">raised</property>
+                <property name="text" translatable="yes">Rotation</property>
+                <layout manager="grid">
+                  <property name="column">0</property>
+                  <property name="ipadx">10</property>
+                  <property name="padx">10</property>
+                  <property name="pady">10</property>
+                  <property name="row">3</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="ttk.Scale" id="scale2">
+                <property name="orient">horizontal</property>
+                <layout manager="grid">
+                  <property name="column">0</property>
+                  <property name="ipadx">30</property>
+                  <property name="padx">10</property>
+                  <property name="pady">10</property>
+                  <property name="row">4</property>
+                </layout>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Frame" id="frame12">
+            <property name="height">200</property>
+            <property name="relief">groove</property>
+            <property name="width">200</property>
+            <layout manager="grid">
+              <property name="column">0</property>
+              <property name="ipadx">10</property>
+              <property name="padx">10</property>
+              <property name="pady">20</property>
+              <property name="row">3</property>
+            </layout>
+            <child>
+              <object class="ttk.Label" id="extraction" named="True">
+                <property name="anchor">center</property>
+                <property name="relief">raised</property>
+                <property name="text" translatable="yes">EXTRACTION</property>
+                <layout manager="grid">
+                  <property name="column">0</property>
+                  <property name="ipadx">10</property>
+                  <property name="padx">10</property>
+                  <property name="pady">10</property>
+                  <property name="row">0</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="ttk.Radiobutton" id="Per_frame" named="True">
+                <property name="command" type="command" cbtype="with_wid">extract_method_select</property>
+                <property name="compound">center</property>
+                <property name="text" translatable="yes">Per Frame </property>
+                <property name="value">Per frame</property>
+                <property name="variable">string:Extract_type</property>
+                <layout manager="grid">
+                  <property name="column">0</property>
+                  <property name="ipadx">30</property>
+                  <property name="padx">10</property>
+                  <property name="pady">10</property>
+                  <property name="row">1</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="ttk.Radiobutton" id="persecond" named="True">
+                <property name="command" type="command" cbtype="with_wid">extract_method_select</property>
+                <property name="text" translatable="yes">Per Second</property>
+                <property name="value">Per second</property>
+                <property name="variable">string:Extract_type</property>
+                <layout manager="grid">
+                  <property name="column">0</property>
+                  <property name="ipadx">30</property>
+                  <property name="padx">10</property>
+                  <property name="pady">10</property>
+                  <property name="row">2</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="ttk.Radiobutton" id="customize" named="True">
+                <property name="command" type="command" cbtype="with_wid">extract_method_select</property>
+                <property name="text" translatable="yes">Customize</property>
+                <property name="value">custom</property>
+                <property name="variable">string:Extract_type</property>
+                <layout manager="grid">
+                  <property name="column">0</property>
+                  <property name="ipadx">30</property>
+                  <property name="padx">10</property>
+                  <property name="pady">10</property>
+                  <property name="row">3</property>
+                </layout>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Frame" id="frame13">
+            <property name="height">200</property>
+            <property name="width">200</property>
+            <layout manager="grid">
+              <property name="column">0</property>
+              <property name="pady">10</property>
+              <property name="row">0</property>
+            </layout>
+            <child>
+              <object class="ttk.Label" id="commande" named="True">
+                <property name="anchor">center</property>
+                <property name="compound">center</property>
+                <property name="justify">right</property>
+                <property name="relief">ridge</property>
+                <property name="text" translatable="yes">Control Menu</property>
+                <layout manager="grid">
+                  <property name="column">0</property>
+                  <property name="ipadx">50</property>
+                  <property name="ipady">10</property>
+                  <property name="padx">10</property>
+                  <property name="pady">10</property>
+                  <property name="row">0</property>
+                </layout>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Frame" id="frame14">
+            <property name="height">50</property>
+            <property name="width">140</property>
+            <layout manager="grid">
+              <property name="column">0</property>
+              <property name="row">4</property>
+            </layout>
+            <containerlayout manager="grid">
+              <property name="anchor">center</property>
+            </containerlayout>
+            <child>
+              <object class="ttk.Button" id="launch" named="True">
+                <property name="command" type="command" cbtype="with_wid">launch_algorithm</property>
+                <property name="compound">center</property>
+                <property name="text" translatable="yes">LAUNCH</property>
+                <layout manager="grid">
+                  <property name="column">0</property>
+                  <property name="row">0</property>
+                </layout>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>
